@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | SkillMatch</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+>
+</head>
+
+<body>
+
+    <nav>
+
+        <div class="logo">
+            SkillMatch
+        </div>
+
+        <div class="dashboard-user">
+
+            <span id="username">
+                Loading...
+            </span>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </nav>
+
+    <section class="dashboard">
+
+        <h1>
+
+            Welcome Back,
+
+            <span id="welcomeName">
+                Student
+            </span>
+
+            👋
+
+        </h1>
+
+        <p>
+            Ready to build your next amazing project?
+        </p>
+
+        <div class="dashboard-grid">
+
+            <!-- Complete Profile -->
+            <div class="dashboard-card" id="profileCard">
+
+                👤
+
+                <h3>Complete Profile</h3>
+
+                <p>
+                    Add your skills and interests.
+                </p>
+
+            </div>
+
+            <!-- Find Matches -->
+            <div class="dashboard-card" id="matchCard">
+
+                🤝
+
+                <h3>Find Matches</h3>
+
+                <p>
+                    Meet students like you.
+                </p>
+
+            </div>
+
+            <!-- Connection Requests -->
+            <div class="dashboard-card" id="requestsCard">
+
+                📩
+
+                <h3>Connection Requests</h3>
+
+                <p>
+                    View incoming connection requests.
+                </p>
+
+            </div>
+
+            <!-- Saved Profiles -->
+          <div class="dashboard-card" id="connectionsCard">
+
+                ⭐
+
+                <h3>My Connections</h3>
+
+                <p>
+                    Profiles you have connected with.
+                </p>
+
+            </div>
+       
+
+        </div>
+
+    </section>
+    <footer class="site-footer">
+
+    <div class="footer-content">
+
+        <!-- Brand -->
+
+        <div class="footer-brand">
+
+            <h2>✨ SkillMatch</h2>
+
+            <p>
+                Connect. Collaborate. Create.
+            </p>
+
+            <p class="made-by">
+                Made with <span>💗</span> by Rishika
+            </p>
+
+        </div>
+
+
+        <!-- Navigation -->
+
+        <div class="footer-column">
+
+            <h3>Navigation</h3>
+
+            <a href="dashboard.html">
+                🏠 Dashboard
+            </a>
+
+            <a href="profile.html">
+                👤 My Profile
+            </a>
+
+            <a href="connections.html">
+                ⭐ My Connections
+            </a>
+
+        </div>
+
+
+        <!-- Features -->
+
+        <div class="footer-column">
+
+            <h3>Features</h3>
+
+            <a href="matches.html">
+                🤝 Find Matches
+            </a>
+
+            <a href="ai.html">
+                🤖 AI Mentor
+            </a>
+
+            <a href="connections.html">
+                💬 Chat
+            </a>
+
+        </div>
+
+
+        <!-- Connect -->
+<div class="footer-column">
+
+    <h3>Connect</h3>
+
+    <div class="social-buttons">
+
+        <a
+            href="https://github.com/diwanrishika08-afk"
+            target="_blank"
+            class="social-btn"
+            title="GitHub"
+        >
+            <i class="fa-brands fa-github"></i>
+        </a>
+
+        <a
+            href="https://www.linkedin.com/in/rishika-diwan-258281406/"
+            target="_blank"
+            class="social-btn"
+            title="LinkedIn"
+        >
+            <i class="fa-brands fa-linkedin"></i>
+        </a>
+
+        <a
+            href="mailto:diwanrishika08@gmail.com"
+            class="social-btn"
+            title="Email"
+        >
+            <i class="fa-solid fa-envelope"></i>
+        </a>
+
+    </div>
+
+</div> 
+    <div class="footer-bottom">
+
+        © 2026 SkillMatch • Made by Rishika
+
+    </div>
+
+</footer>
+    <!-- Floating AI Assistant -->
+<button id="floatingAI" onclick="openSkillMatchAI()">
+
+    <span class="ai-icon">🤖</span>
+
+    <span class="ai-label">
+        SkillMatch AI
+    </span>
+
+</button>
+    <script>
+function openSkillMatchAI() {
+    window.location.href = "ai.html";
+}
+</script>
+
+    <script src="js/dashboard.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SkillMatch AI Mentor</title>
+
+    <link rel="stylesheet" href="css/ai.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <div class="ai-page">
+
+        <!-- HEADER -->
+
+        <header class="ai-header">
+
+            <div>
+
+                <h1>🤖 SkillMatch AI</h1>
+
+                <p>Your personal project & career mentor</p>
+
+            </div>
+
+            <button id="backBtn">
+                ← Dashboard
+            </button>
+
+        </header>
+
+
+        <!-- CHAT AREA -->
+
+        <main class="chat-container">
+
+            <div id="chatMessages" class="chat-messages">
+
+                <!-- Welcome Message -->
+
+                <div class="message ai-message">
+
+                    <div class="avatar">
+                        🤖
+                    </div>
+
+                    <div class="message-content">
+
+                        <strong>SkillMatch AI</strong>
+
+                        <p>
+                            Hey! 👋 I'm your SkillMatch AI Mentor.
+                        </p>
+
+                        <p>
+                            I can help you choose projects, find teammates,
+                            plan your learning journey and prepare for your career.
+                        </p>
+
+                        <p>
+                            What would you like help with?
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- QUICK ACTIONS -->
+
+                <div class="quick-actions">
+
+                    <button onclick="sendQuickMessage('Suggest a project for me')">
+                        💡 Suggest a Project
+                    </button>
+
+                    <button onclick="sendQuickMessage('What skills should I learn next?')">
+                        📚 What Should I Learn?
+                    </button>
+
+                    <button onclick="sendQuickMessage('Suggest a teammate for me')">
+                        👥 Recommend Teammate
+                    </button>
+
+                    <button onclick="sendQuickMessage('Give me career advice')">
+                        🎯 Career Advice
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- TYPING INDICATOR -->
+
+            <div id="typingIndicator" class="typing hidden">
+
+                🤖 SkillMatch AI is thinking...
+
+            </div>
+
+
+            <!-- INPUT -->
+
+            <div class="chat-input-area">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask SkillMatch AI anything..."
+                    autocomplete="off"
+                >
+
+                <button id="sendBtn">
+                    ➤
+                </button>
+
+            </div>
+
+        </main>
+
+    </div>
+
+
+    <script src="js/ai.js"></script>
+
+</body>
+
+</html>

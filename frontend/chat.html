@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chat | SkillMatch</title>
+
+    <link rel="stylesheet" href="css/chat.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet"
+    >
+
+</head>
+
+<body>
+
+    <div class="chat-page">
+
+        <!-- HEADER -->
+
+        <header class="chat-header">
+
+            <button id="backBtn">
+                ←
+            </button>
+
+            <div class="chat-user">
+
+                <div id="userAvatar" class="chat-avatar">
+                    U
+                </div>
+
+                <div>
+
+                    <h2 id="userName">
+                        Loading...
+                    </h2>
+
+                    <p>
+                        SkillMatch Connection
+                    </p>
+
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- MESSAGES -->
+
+        <main id="messagesContainer" class="messages-container">
+
+            <div id="loadingMessage" class="loading-message">
+                Loading messages...
+            </div>
+
+        </main>
+
+
+        <!-- INPUT -->
+
+        <div class="message-input-area">
+
+            <input
+                type="text"
+                id="messageInput"
+                placeholder="Type a message..."
+                autocomplete="off"
+            >
+
+            <button id="sendBtn">
+                ➤
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="js/chat.js"></script>
+
+</body>
+
+</html>
