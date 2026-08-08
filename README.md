@@ -82,7 +82,7 @@ SkillMatch/
 ├── .gitignore
 └── README.md
 
-🤖 AI Mentor
+## 🤖 AI Mentor
 
 SkillMatch integrates Google Gemini to provide personalized assistance based on the user's profile.
 
@@ -101,12 +101,13 @@ Example:
 
 The AI uses the user's profile information to provide personalized recommendations.
 
-🔐 Security
+## 🔐 Security
 Passwords are hashed using bcrypt.
 JWT is used for authentication.
 Sensitive credentials are stored in environment variables.
 .env and node_modules are excluded from Git.
-🔮 Future Improvements
+
+## 🔮 Future Improvements
 🔔 Real-time message notifications
 ⚡ Real-time chat using Socket.IO
 🧠 Advanced AI recommendations
@@ -114,7 +115,8 @@ Sensitive credentials are stored in environment variables.
 🔍 Advanced search and filtering
 ☁️ Cloud deployment
 📱 Improved mobile experience
-👩‍💻 Author
+
+## Author
 Rishika Diwan
 
 B.Tech CSE — Data Science
