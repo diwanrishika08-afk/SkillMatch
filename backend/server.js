@@ -16,153 +16,87 @@ const messageRoutes = require("./routes/messageRoutes");
 const app = express();
 
 
-// ===========================
+// ==============================
 // MIDDLEWARE
-// ===========================
+// ==============================
 
 app.use(cors({
-    origin: true,
-    credentials: true
+    origin: [
+        "http://127.0.0.1:5500",
+        "http://localhost:5500"
+    ]
 }));
 
 app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
 
-app.use(express.urlencoded({
-    extended: true
-}));
 
-app.use(async (req, res, next) => {
-
-    try {
-
-        await connectDB();
-
-        next();
-
-    }
-
-    catch (error) {
-
-        res.status(500).json({
-
-            message: "Database connection failed"
-
-        });
-
-    }
-
-});
-
-// ===========================
+// ==============================
 // ROUTES
-// ===========================
+// ==============================
 
 app.use("/api/users", userRoutes);
-
 app.use("/api/auth", authRoutes);
-
 app.use("/api/ai", aiRoutes);
-
 app.use("/api/messages", messageRoutes);
 
 
-// ===========================
+// ==============================
 // HOME ROUTE
-// ===========================
+// ==============================
 
 app.get("/", (req, res) => {
-
     res.send("SkillMatch Backend Running 🚀");
-
 });
 
 
-// ===========================
-// MONGODB CONNECTION
-// ===========================
+// ==============================
+// START SERVER
+// ==============================
 
-let isConnected = false;
-
-async function connectDB() {
-
-    if (isConnected) {
-        return;
-    }
+async function startServer() {
 
     try {
 
         console.log("Connecting to MongoDB...");
 
-        await mongoose.connect(
-            process.env.MONGO_URI
-        );
+        await mongoose.connect(process.env.MONGO_URI);
 
-        isConnected = true;
+        const User = require("./models/User");
+
+        console.log("User Model Loaded:", User.modelName);
 
         console.log("✅ MongoDB Connected");
 
-    }
+        app.listen(process.env.PORT || 5000, () => {
 
-    catch (error) {
-
-        console.error(
-            "❌ MongoDB Connection Error"
-        );
-
-        console.error(error);
-
-        throw error;
-
-    }
-
-}
-
-
-// ===========================
-// VERCEL HANDLER
-// ===========================
-
-
-
-// ===========================
-// EXPORT APP
-// ===========================
-
-module.exports = app;
-
-
-// ===========================
-// LOCAL DEVELOPMENT
-// ===========================
-
-if (require.main === module) {
-
-    const PORT =
-        process.env.PORT || 5000;
-
-    connectDB()
-        .then(() => {
-
-            app.listen(
-                PORT,
-                () => {
-
-                    console.log(
-                        `🚀 Server running on http://localhost:${PORT}`
-                    );
-
-                }
+            console.log(
+                `🚀 Server running on http://localhost:${process.env.PORT || 5000}`
             );
-
-        })
-        .catch(error => {
-
-            console.error(
-                "❌ Failed to start server"
-            );
-
-            console.error(error);
 
         });
 
+    } catch (error) {
+
+        console.error("❌ MongoDB Error");
+        console.error(error);
+
+    }
+
 }
+
+
+// ==============================
+// LOCAL SERVER START
+// ==============================
+
+if (require.main === module) {
+    startServer();
+}
+
+
+// ==============================
+// EXPORT APP
+// ==============================
+
+module.exports = app;
