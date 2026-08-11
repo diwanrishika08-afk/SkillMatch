@@ -6,6 +6,12 @@ SkillMatch is a full-stack web platform that helps students find teammates, conn
 
 ---
 
+## 🌐 Live Demo
+
+👉 **[Visit SkillMatch](https://skillmatch102.netlify.app/)**
+
+---
+
 ## ✨ Features
 
 - 👤 User signup and login
