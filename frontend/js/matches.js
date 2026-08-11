@@ -58,14 +58,14 @@ function calculateMatch(currentUser, otherUser) {
 loadMatches();
 async function loadMatches() {
     const currentResponse = await fetch(
-    `http://localhost:5000/api/users/${storedUser.id}`
+    `https://skillmatch-backend-ystd.onrender.com/api/users/${storedUser.id}`
 );
 
 currentUser = await currentResponse.json();
 
     try {
 
-        const response = await fetch("http://localhost:5000/api/users");
+        const response = await fetch("https://skillmatch-backend-ystd.onrender.com/api/users");
 
         const users = await response.json();
         users.sort((a,b)=>{
@@ -139,7 +139,7 @@ button.addEventListener("click", async () => {
     try {
 
         const response = await fetch(
-            "http://localhost:5000/api/users/connect",
+            "https://skillmatch-backend-ystd.onrender.com/api/users/connect",
             {
                 method: "PUT",
                 headers: {

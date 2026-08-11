@@ -13,7 +13,7 @@ async function loadRequests() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/users/requests/${storedUser.id}`
+            `https://skillmatch-backend-ystd.onrender.com/api/users/requests/${storedUser.id}`
         );
 
         const requests = await response.json();
@@ -72,7 +72,7 @@ async function loadRequests() {
                 try {
 
                     const response = await fetch(
-                        "http://localhost:5000/api/users/accept",
+                        "https://skillmatch-backend-ystd.onrender.com/api/users/accept",
                         {
                             method: "PUT",
                             headers: {
@@ -112,7 +112,7 @@ async function loadRequests() {
                 try {
 
                     const response = await fetch(
-                        "http://localhost:5000/api/users/reject",
+                        "https://skillmatch-backend-ystd.onrender.com/api/users/reject",
                         {
                             method: "PUT",
                             headers: {

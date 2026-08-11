@@ -69,7 +69,7 @@ async function loadUser() {
 
         const response = await fetch(
 
-            `http://localhost:5000/api/users/${otherUserId}`
+            `https://skillmatch-backend-ystd.onrender.com/api/users/${otherUserId}`
 
         );
 
@@ -119,7 +119,7 @@ async function loadMessages() {
 
         const response = await fetch(
 
-            `http://localhost:5000/api/messages/${storedUser.id}/${otherUserId}`
+            `https://skillmatch-backend-ystd.onrender.com/api/messages/${storedUser.id}/${otherUserId}`
 
         );
 
@@ -254,7 +254,7 @@ async function sendMessage() {
 
         const response = await fetch(
 
-            "http://localhost:5000/api/messages/send",
+            "https://skillmatch-backend-ystd.onrender.com/api/messages/send",
 
             {
 

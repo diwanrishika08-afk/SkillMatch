@@ -15,7 +15,7 @@ async function loadConnections() {
     try {
 
         const response = await fetch(
-            `http://localhost:5000/api/users/connections/${storedUser.id}`
+            `https://skillmatch-backend-ystd.onrender.com/api/users/connections/${storedUser.id}`
         );
 
         const users = await response.json();

@@ -102,7 +102,7 @@ async function sendMessage() {
 
         const profileResponse = await fetch(
 
-            `http://localhost:5000/api/users/${storedUser.id}`
+            `https://skillmatch-backend-ystd.onrender.com/api/users/${storedUser.id}`
 
         );
 
@@ -121,7 +121,7 @@ async function sendMessage() {
 
         const response = await fetch(
 
-            "http://localhost:5000/api/ai/chat",
+            "https://skillmatch-backend-ystd.onrender.com/api/ai/chat",
 
             {
 
