@@ -2,7 +2,7 @@ const express = require("express");
 
 const router = express.Router();
 
-const Message = require("../models/Message");
+const message = require("../models/message");
 const User = require("../models/User");
 
 
@@ -72,7 +72,7 @@ router.post("/send", async (req, res) => {
 
         // Create message
 
-        const message = new Message({
+        const message = new message({
 
             sender: senderId,
 
@@ -126,7 +126,7 @@ router.get("/:userId/:otherUserId", async (req, res) => {
         } = req.params;
 
 
-        const messages = await Message.find({
+        const messages = await message.find({
 
             $or: [
 
